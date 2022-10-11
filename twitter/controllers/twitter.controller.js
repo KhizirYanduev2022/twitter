@@ -62,7 +62,7 @@ LikeupdateTwitter:(req,res)=>{
                 }else{
                     res.json(data)
                 }
-            })
+            }) .populate('comments')
         }
 
 }
