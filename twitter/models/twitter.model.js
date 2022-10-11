@@ -3,14 +3,19 @@ const mongoose = require('mongoose')
 const twitterSchema = mongoose.Schema({
     text: String,
     time: String,
-    Comments:{
-        type: mongoose.SchemaTypes.ObjectId,
-        ref: 'Comments'
+    Saves:{
+        type: mongoose.SchemaTypes.Array,
+        ref: 'Users'
     },
-    Likes:[{
+    Likes:{
+        type: mongoose.SchemaTypes.Array,
+        ref: 'Users'
+    },
+
+    comments:{
         type: mongoose.SchemaTypes.ObjectId,
-        ref: 'likes'
-    }]
+        ref: 'comments'
+    }
  
 })
 
